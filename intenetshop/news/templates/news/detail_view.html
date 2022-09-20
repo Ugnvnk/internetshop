@@ -1,0 +1,17 @@
+{% extends 'main/layout.html'%}
+
+
+{% block content %}
+<div class="features" >
+        <h1>{{article.title}}</h1>
+        <p>{{ article.title }}</p>
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
+        <a href="{% url 'update_view' article.slug %}" class="btn btn-info">Update</a>
+        <a href="{% url 'delete_view' article.slug %}" class="btn btn-danger">Delete</a>
+
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'main/layout.html'%}
+
+
+{% block content %}
+<div class="features" xmlns="http://www.w3.org/1999/html">
+        <h>News on our site</h>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores cum doloribus est modi mollitia quas quod. Commodi consequuntur iure magnam minus quidem quis, quos, sit tempora ullam vero, voluptate.</p>
+        <button class="btn btn-warning">News</button>
+        {% if news %}
+                {% for ar in news %}
+                    <div class="alert alert-warning">
+                        <h3>{{ar.title}}</h3>
+                        <p>{{ar.anons}}</p>
+                        <a href="{% url 'detail_view'  ar.slug %}" class="btn btn-info">Read</a>
+                    </div>
+
+                {% endfor %}
+
+         {% else %}
+                        <a>You hove no articles!</a>
+         {% endif %}
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="features" xmlns="http://www.w3.org/1999/html">
+        <h>{{title}}</h>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores cum doloribus est modi mollitia quas quod. Commodi consequuntur iure magnam minus quidem quis, quos, sit tempora ullam vero, voluptate.</p>
+        <button class="btn btn-warning">About us</button>
+        {% for el in values %}
+        {% filter upper %}
+        <p>{{el}}</p>
+        {% endfilter %}
+        {% endfor %}
+    </div>
+{% endblock %}
